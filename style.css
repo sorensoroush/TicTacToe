@@ -58,6 +58,11 @@ main {
     font-size: 5em;
 }
 
+#reset {
+    height: 30px;
+    margin: 10px;
+}
+
 /*
 #cell7, #cell8, #cell9 {
     border-top: none;

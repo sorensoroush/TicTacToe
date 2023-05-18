@@ -2,6 +2,7 @@ const cells = document.getElementsByClassName('cell')
 const displayX = document.getElementById('X-display')
 const displayO = document.getElementById('O-display')
 const displayText = document.getElementById('text-display')
+const resetButton = document.getElementById('reset')
 
 let currentTurn = 'X'
 let turnCount = 1
@@ -69,6 +70,10 @@ const cellClick = e => {
 
 const resetBoard = () => {
     displayText.textContent = 'Current Turn'
+    turnCount = 1
+    currentTurn = 'X'
+    displayX.style.visibility = 'visible'
+    displayO.style.visibility = 'hidden'
     for (cell of cells) {
         cell.textContent = ''
         cell.addEventListener('click', cellClick)
@@ -80,3 +85,5 @@ const gameStart = () => {
 }
 
 gameStart()
+
+resetButton.addEventListener('click', gameStart)
