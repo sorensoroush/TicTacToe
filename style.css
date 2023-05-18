@@ -32,22 +32,32 @@ main {
     margin: 10px 0;
 }
 
-#X-turn {
+#X-display {
     font-size: 2em;
+}
+
+#O-display {
+    font-size: 2em;
+    visibility: hidden;
+}
+
+.X {
     color: #FF0000;
 }
 
-#O-turn {
-    font-size: 2em;
+.O {
     color: #0000FF;
 }
 
-td {
+.cell {
     width: 120px;
     height: 120px;
     background-color: rgba(255,255,255,0.25);
     border: 3px solid black;
+    text-align: center;
+    font-size: 5em;
 }
+
 /*
 #cell7, #cell8, #cell9 {
     border-top: none;
